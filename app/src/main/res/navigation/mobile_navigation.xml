@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.example.uhsproject.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="@string/title_Listing"
         tools:layout="@layout/fragment_home" />
 
     <fragment
@@ -22,9 +22,4 @@
         android:name="com.example.uhsproject.ui.notifications.NotificationsFragment"
         android:label="@string/title_info"
         tools:layout="@layout/fragment_notifications" />
-    <fragment
-        android:id="@+id/LIST"
-        android:name="com.example.uhsproject.LIST"
-        android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
 </navigation>
