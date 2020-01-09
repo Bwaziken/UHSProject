@@ -3,7 +3,7 @@
     <string name="title_home">Listings yeet</string>
     <string name="title_chats">Chats</string>
     <string name="title_info">Info</string>
-
+    <string name="profile_picture">Picture</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
