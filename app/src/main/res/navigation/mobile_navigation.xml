@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/navigation_chats"
-        android:name="com.example.uhsproject.ui.dashboard.DashboardFragment"
+        android:name="com.example.uhsproject.ui.Chat.ChatFragment"
         android:label="@string/title_chats"
         tools:layout="@layout/fragment_chats" />
 
     <fragment
         android:id="@+id/navigation_info"
-        android:name="com.example.uhsproject.ui.notifications.NotificationsFragment"
+        android:name="com.example.uhsproject.ui.notifications.InfoFragment"
         android:label="@string/title_info"
         tools:layout="@layout/fragment_info" />
 </navigation>
