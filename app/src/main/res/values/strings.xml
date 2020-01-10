@@ -5,6 +5,7 @@
     <string name="title_info">Info</string>
     <string name="profile_picture">Picture</string>
     <string name="message">Message</string>
+    <string name="send">SEND</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
