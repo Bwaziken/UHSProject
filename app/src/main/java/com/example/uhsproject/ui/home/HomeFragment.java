@@ -25,7 +25,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view=inflater.inflate(R.layout.fragment_home, container, false);
-        String[] tutorList={"People",  "More people","More people","More people","More people"};
+        String[] tutorList={"People 0",  "People 1","people 2","More people","More people"};
 
         ListView listview=(ListView) view.findViewById(R.id.ListView);
         ArrayAdapter<String> tutorListAdapter = new ArrayAdapter <String>(
@@ -41,11 +41,15 @@ public class HomeFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if(position==0){
-                    Toast.makeText(getActivity(), "You cliked 0", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "Redirecting to chat", Toast.LENGTH_SHORT).show();
 
                 }
                 else if(position==1){
-                    Toast.makeText(getActivity(), "You cliked 1", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "You cliked 1", Toast.LENGTH_SHORT).show();
+
+                }
+                else if(position==2){
+                    Toast.makeText(getActivity(), "You cliked 2", Toast.LENGTH_SHORT).show();
 
                 }
             }
