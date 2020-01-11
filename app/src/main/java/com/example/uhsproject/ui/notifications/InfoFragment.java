@@ -12,8 +12,6 @@ import com.example.uhsproject.R;
 
 public class InfoFragment extends Fragment {
 
-    private InfoViewModel infoViewModel;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
