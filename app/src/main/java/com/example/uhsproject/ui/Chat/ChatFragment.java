@@ -39,7 +39,7 @@ public class ChatFragment extends Fragment {
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
                 message4=message3;
                 message3=messageBeforeBefore;
                 messageBeforeBefore=messageBefore;
