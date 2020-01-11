@@ -74,8 +74,19 @@ android:layout_height="match_parent">
                 android:background="#FFFFFF"
                 android:textSize="30sp" />
 
+            <TextView
+                android:id="@+id/chatpt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:textSize="30sp" />
 
-
+            <TextView
+                android:id="@+id/chatpt4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:textSize="30sp" />
 
 
         </LinearLayout>
