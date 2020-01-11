@@ -16,7 +16,6 @@ android:layout_height="match_parent">
             android:layout_width="309dp"
             android:layout_height="49dp"
             android:layout_marginBottom="10dp"
-            android:autofillHints=""
             android:ems="10"
             android:hint="@string/message"
             android:inputType="textLongMessage"
@@ -34,6 +33,7 @@ android:layout_height="match_parent">
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/messageBox" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
@@ -74,61 +74,6 @@ android:layout_height="match_parent">
                 android:background="#FFFFFF"
                 android:textSize="30sp" />
 
-            <TextView
-                android:id="@+id/chatpt3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/chatpt4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/chatpt5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/chatpt6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/chatpt7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/chatpt8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/chatpt9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/chatpt10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:textSize="30sp" />
 
 
 

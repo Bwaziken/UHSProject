@@ -27,19 +27,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        top = (TextView) findViewById(R.id.chatTop);//sent messages
-        messageBox = (EditText) findViewById(R.id.messageBox);//chat fragment stuff
-        send = (Button) findViewById(R.id.send);
-        send.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                top.setText("button lcicked");
-                //message = messageBox.getText().toString();
-
-                //top.setText(message);
-           }
-        });
-
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
