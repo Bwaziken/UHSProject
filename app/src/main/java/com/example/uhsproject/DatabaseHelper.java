@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -33,8 +34,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL1, item1);
         contentValues.put(COL2, item2);
-        Long result = db.insert(TABLE_NAME, null, contentValues);
+        Long result = db.insertOrThrow(TABLE_NAME, null, contentValues);
         // if data is inserted incorrectly will return -1
+        //Toast.makeText(DatabaseHelper.this,result.toString(),Toast.LENGTH_SHORT).show();
         if (result == -1){
             return false;
         }else {

@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.uhsproject.DatabaseHelper;
+import com.example.uhsproject.MainActivity;
 import com.example.uhsproject.R;
 
 public class InfoFragment extends Fragment {
@@ -27,14 +28,23 @@ public class InfoFragment extends Fragment {
         registerBtn = view.findViewById(R.id.registerBtn);
         nameField = view.findViewById(R.id.nameField);
         descField = view.findViewById(R.id.descField);
+        adddata();
+        return view;
+    }
+    public void adddata(){
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 if (nameField.length() != 0 && descField.length() != 0 ){
-                    boolean isInserted = mDatabaseHelper.addData(nameField.getText().toString(),descField.getText().toString());
-                    if (isInserted){
+                    String nameField1 = nameField.getText().toString();
+                    String descField1 = descField.getText().toString();
+                    Toast.makeText(getActivity(),nameField1,Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(),descField1,Toast.LENGTH_SHORT).show();
+
+                    boolean isInserted = mDatabaseHelper.addData(nameField1,descField1);
+                    if (isInserted==true){
                         toastMessage("You good my nigga");
-                    }else{
+                    }else {
                         toastMessage("Ay no good my man");
                     }
                     nameField.setText("");
@@ -44,7 +54,6 @@ public class InfoFragment extends Fragment {
                 }
             }
         });
-        return view;
     }
 
     private void toastMessage(String message){
