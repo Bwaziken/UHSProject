@@ -7,11 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.uhsproject.DatabaseHelper;
 import com.example.uhsproject.R;
@@ -27,30 +30,20 @@ public class HomeFragment extends Fragment {
 
         mDatabaseHelper = new DatabaseHelper (getContext());
         View view=inflater.inflate(R.layout.fragment_home, container, false);
-        String[] tutorList={"People",  "More people","More people","More people","More people"}; // placeholder for display
+
+        RecyclerView recyclerView= (RecyclerView) view.findViewById(R.id.listRecyclerView);
+        com.example.uhsproject.ListAdapter listAdapter=new com.example.uhsproject.ListAdapter();
+        recyclerView.setAdapter(listAdapter);
+        RecyclerView.LayoutManager layoutManager =new LinearLayoutManager(getActivity());
+
+        recyclerView.setLayoutManager(layoutManager);
+
 
         super.onCreate(savedInstanceState);
-        ListView listview=view.findViewById(R.id.ListView);
 
 
-        ArrayAdapter<String> tutorListAdapter = new ArrayAdapter <>(getActivity(), android.R.layout.simple_list_item_1, tutorList);
-
-        listview.setAdapter(tutorListAdapter);
 
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position==0){
-                    Toast.makeText(getActivity(), "You cliked 0", Toast.LENGTH_LONG).show();
-
-                }
-                else if(position==1){
-                    Toast.makeText(getActivity(), "You cliked 1", Toast.LENGTH_LONG).show();
-
-                }
-            }
-        });
         return view;
     }
     public void populateListView() {

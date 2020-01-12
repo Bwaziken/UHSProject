@@ -1,5 +1,7 @@
 package com.example.uhsproject;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.ListFragment;
 
 import com.example.uhsproject.ui.Chat.ChatFragment;
 import com.example.uhsproject.ui.home.HomeFragment;
@@ -16,20 +19,22 @@ import com.example.uhsproject.ui.notifications.InfoFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    String message;
-    EditText messageBox;
-    Button send;
-    TextView top;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        ListFragment fragment= new ListFragment();
+        FragmentManager fragmentManager= getFragmentManager();
+        FragmentTransaction fragmentTransaction= fragmentManager.beginTransaction();
+
+        fragmentTransaction.commit();
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        //I added this if statement to keep the selected fragment when rotating the device
+
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
