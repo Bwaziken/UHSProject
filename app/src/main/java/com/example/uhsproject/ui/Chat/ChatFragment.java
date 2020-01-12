@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
@@ -46,6 +47,8 @@ public class ChatFragment extends Fragment {
                 messageBefore=message;
 
                 message = messageBox.getText().toString();
+                Toast.makeText(getActivity(),message,Toast.LENGTH_SHORT).show();
+                messageBox.setText("");
                 top.setText(message);
                 one.setText(messageBefore);
                 two.setText(messageBeforeBefore);
