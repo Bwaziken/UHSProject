@@ -15,22 +15,27 @@ import com.example.uhsproject.DatabaseHelper;
 import com.example.uhsproject.R;
 
 public class InfoFragment extends Fragment {
+
     DatabaseHelper mDatabaseHelper;
     Button registerBtn;
-    EditText nameField;
+    EditText nameField, descField;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        mDatabaseHelper = new DatabaseHelper (getContext());
         View view =  inflater.inflate(R.layout.fragment_info, container, false);
-        registerBtn = (Button) view.findViewById(R.id.registerBtn);
-        nameField = (EditText) view.findViewById(R.id.nameField);
+        registerBtn = view.findViewById(R.id.registerBtn);
+        nameField = view.findViewById(R.id.nameField);
+        descField = view.findViewById(R.id.descField);
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                String newEntry = nameField.getText().toString();
-                if (nameField.length() != 0){
-                    AddData(newEntry);
+                String newEntryName = nameField.getText().toString();
+                String newEntryDesc = descField.getText().toString();
+                if (nameField.length() != 0 && descField.length() != 0 ){
+                    AddData(newEntryName, newEntryDesc);
                     nameField.setText("");
+                    descField.setText("");
                 }else {
                     toastMessage("Yo enter something wasteyute");
                 }
@@ -39,9 +44,9 @@ public class InfoFragment extends Fragment {
         return view;
     }
 
-    public void AddData(String newEntry){
+    public void AddData(String newEntryName, String newEntryDesc){
 
-        boolean insertData = mDatabaseHelper.addData(newEntry);
+        boolean insertData = mDatabaseHelper.addData(newEntryName, newEntryDesc);
         if (insertData){
             toastMessage("You good my nigga");
         }else{
