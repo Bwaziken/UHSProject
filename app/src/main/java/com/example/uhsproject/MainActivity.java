@@ -2,7 +2,6 @@ package com.example.uhsproject;
 
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -35,11 +34,6 @@ public class MainActivity extends AppCompatActivity {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
         }
-
-
-
-
-
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
