@@ -46,7 +46,7 @@ public class InfoFragment extends Fragment {
         });
         return view;
     }
-    
+
     private void toastMessage(String message){
         Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
     }
