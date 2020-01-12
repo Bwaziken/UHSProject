@@ -22,7 +22,7 @@ public class InfoFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mDatabaseHelper = new DatabaseHelper (getContext());
+        mDatabaseHelper = new DatabaseHelper (getActivity().getApplicationContext());
         View view =  inflater.inflate(R.layout.fragment_info, container, false);
         registerBtn = view.findViewById(R.id.registerBtn);
         nameField = view.findViewById(R.id.nameField);
@@ -30,10 +30,13 @@ public class InfoFragment extends Fragment {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                String newEntryName = nameField.getText().toString();
-                String newEntryDesc = descField.getText().toString();
                 if (nameField.length() != 0 && descField.length() != 0 ){
-                    AddData(newEntryName, newEntryDesc);
+                    boolean isInserted = mDatabaseHelper.addData(nameField.getText().toString(),descField.getText().toString());
+                    if (isInserted){
+                        toastMessage("You good my nigga");
+                    }else{
+                        toastMessage("Ay no good my man");
+                    }
                     nameField.setText("");
                     descField.setText("");
                 }else {
@@ -43,18 +46,7 @@ public class InfoFragment extends Fragment {
         });
         return view;
     }
-
-    public void AddData(String newEntryName, String newEntryDesc){
-
-        boolean insertData = mDatabaseHelper.addData(newEntryName, newEntryDesc);
-        if (insertData){
-            toastMessage("You good my nigga");
-        }else{
-            toastMessage("Ay no good my man");
-        }
-    }
-
-
+    
     private void toastMessage(String message){
         Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
     }
