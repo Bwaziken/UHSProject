@@ -30,17 +30,20 @@ public class ListAdapter extends RecyclerView.Adapter {
     }
     private class ListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private TextView mItemText;
+        private TextView mItemText2;
         private ImageView mItemImage;
 
         public ListViewHolder(View itemView){
             super(itemView);
             mItemText=(TextView) itemView.findViewById(R.id.itemText);
+            mItemText2=(TextView) itemView.findViewById(R.id.itemText2);
             mItemImage=(ImageView) itemView.findViewById(R.id.itemImage);
             itemView.setOnClickListener(this);
 
         }
         public void bindView(int position){
             mItemText.setText(ListData.tutors[position]);
+            mItemText2.setText(ListData.tutorsdescription[position]);
             mItemImage.setImageResource(ListData.profilePicture[position]);
         }
         public void onClick(View view){
