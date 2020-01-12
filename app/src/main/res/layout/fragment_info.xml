@@ -38,7 +38,7 @@
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-        android:text="Name"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
         android:ems="10"
         android:hint="Subject"
         android:inputType="textPersonName"
-        android:text="Subject"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameField" />

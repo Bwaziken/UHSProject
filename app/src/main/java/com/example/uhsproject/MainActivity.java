@@ -2,6 +2,7 @@ package com.example.uhsproject;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -18,11 +19,17 @@ import com.example.uhsproject.ui.home.HomeFragment;
 import com.example.uhsproject.ui.notifications.InfoFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity  {
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -65,4 +72,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             };
+
+
+
 }
