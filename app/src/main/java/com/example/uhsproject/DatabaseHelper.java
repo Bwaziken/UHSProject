@@ -15,12 +15,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COL1 = "AccountName";
     private static final String COL2 = "AccountDesc";
 
-    public DatabaseHelper(Context context) { super(context, TABLE_NAME, null, 1); }
+    public DatabaseHelper(Context context) {
+        super(context, TABLE_NAME, null, 1);
+    }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String createTable = "CREATE TABLE " + TABLE_NAME + "( ID INTEGER PRIMARY KEY AUTOINCREMENT, COL1 TEXT, COL2 TEXT )";
-        db.execSQL(createTable);
+        db.execSQL("CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, COL1 TEXT, COL2 TEXT )");
     }
 
     @Override
