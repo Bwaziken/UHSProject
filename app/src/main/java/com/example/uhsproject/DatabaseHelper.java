@@ -35,7 +35,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL2, item2);
         Long result = db.insert(TABLE_NAME, null, contentValues);
         // if data is inserted incorrectly will return -1
-        return result != -1;
+        if (result == -1){
+            return false;
+        }else {
+            return true;
+        }
     }
     public Cursor getData(){
         SQLiteDatabase db = this.getWritableDatabase();
