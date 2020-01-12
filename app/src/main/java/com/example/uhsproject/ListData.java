@@ -6,21 +6,23 @@ import java.util.ArrayList;
 
 public class ListData {
 
-    DatabaseHelper mDatabaseHelper;
-    ListData listData = new ListData();
 
-    public ArrayList<String> pullNames() {
+    static DatabaseHelper mDatabaseHelper;
+    ListData listData = new ListData();
+    static ArrayList<String> AccountName = new ArrayList<>();
+    static ArrayList<String> AccountDesc = new ArrayList<>();
+    public static ArrayList<String> pullNames() {
         Cursor data = mDatabaseHelper.getData();
-        ArrayList<String> AccountName = new ArrayList<>();
+
         while (data.moveToNext()) {
             AccountName.add(data.getString(1));
         }
         return AccountName;
     }
 
-    public ArrayList<String> pullDesc() {
+    public static ArrayList<String> pullDesc() {
         Cursor data = mDatabaseHelper.getData();
-        ArrayList<String> AccountDesc = new ArrayList<>();
+
         while (data.moveToNext()) {
             AccountDesc.add(data.getString(2));
 
@@ -28,14 +30,24 @@ public class ListData {
         return AccountDesc;
     }
 
-    public static String[] tutors = new String[]{
-            "Tutor", "Tutor", "Tutor",
-    };
+    public static String[] tutors = new String[] {"tutor", "tutor", "tutor"};
+    public static String[] tutorsdescription = new String[] {"tutor", "tutor", "tutor"};
+    public static int[] profilePicture = new int[]{R.drawable.profilepic,R.drawable.profilepic,R.drawable.profilepic};
+   // public static String[] tutors = new String[AccountName.size()];
 
-    public static String[] tutorsdescription = new String[]{
-        "Tutor", "Tutor", "Tutor", };
+    //public static String[] tutorsdescription = new String[AccountName.size()];
 
-    public static int[] profilePicture = new int[]{
-        R.drawable.profilepic, R.drawable.profilepic, R.drawable.profilepic,
-        };
+   // public static int[] profilePicture = new int[AccountName.size()];
+
+    //public static void passes(){
+
+        //for (int i=0;i<AccountName.size();i++){
+            //tutors[i]=AccountName.get(i);
+            //tutorsdescription[i]=AccountDesc.get(i);
+            //profilePicture[i]=R.drawable.profilepic;
+
+       // }
+
+    //}
+
 }

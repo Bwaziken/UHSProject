@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="40"
+        android:id="@+id/tutorImage"
+
+        android:src="@drawable/profilepic"/>
+
+    <TextView
+        android:id="@+id/tutordescription"
+        android:layout_width="390dp"
+        android:layout_height="136dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="40dp"
+        android:text="Info"
+        android:textSize="22sp"
+
+        />
+
+</LinearLayout>
