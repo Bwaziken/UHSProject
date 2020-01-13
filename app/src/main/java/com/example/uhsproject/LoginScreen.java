@@ -31,6 +31,7 @@ public class LoginScreen extends AppCompatActivity {
             registerBtn = findViewById(R.id.registerBtn);
             nameField = findViewById(R.id.nameField);
             descField = findViewById(R.id.descField);
+
             registerBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v){

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -21,7 +20,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, COL1 TEXT, COL2 TEXT )");
+        String createTable = "CREATE TABLE " + TABLE_NAME + " (" + COL0 + "INTEGER PRIMARY KEY AUTOINCREMENT," +  COL1 + "TEXT," + COL2 + "TEXT )";
+        db.execSQL(createTable);
     }
 
     @Override
@@ -38,11 +38,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Long result = db.insertOrThrow(TABLE_NAME, null, contentValues);
         // if data is inserted incorrectly will return -1
         //Toast.makeText(DatabaseHelper.this,result.toString(),Toast.LENGTH_SHORT).show();
+        db.close();
         if (result == -1){
             return false;
         }else {
             return true;
         }
+
     }
     public Cursor getData(){
         SQLiteDatabase db = this.getWritableDatabase();
