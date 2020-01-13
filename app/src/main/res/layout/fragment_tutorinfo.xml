@@ -14,7 +14,7 @@
         android:src="@drawable/profilepic" />
 
     <TextView
-        android:id="@+id/tutorname"
+        android:id="@+id/infoName"
         android:layout_width="390dp"
         android:layout_height="39dp"
         android:layout_marginLeft="11dp"
@@ -25,7 +25,7 @@
         android:background="@drawable/rectangle"/>
 
     <TextView
-        android:id="@+id/tutordescription1"
+        android:id="@+id/infoDesc1"
         android:layout_width="184dp"
         android:layout_height="43dp"
         android:layout_marginLeft="11dp"
@@ -36,7 +36,7 @@
         />
 
     <TextView
-        android:id="@+id/tutordescription2"
+        android:id="@+id/infoDesc2"
         android:layout_width="192dp"
         android:layout_height="43dp"
         android:layout_marginLeft="210dp"
@@ -46,7 +46,7 @@
         android:textSize="22sp" />
 
     <TextView
-        android:id="@+id/tutordescription3"
+        android:id="@+id/infoDesc3"
         android:layout_width="391dp"
         android:layout_height="89dp"
         android:layout_marginLeft="11dp"
