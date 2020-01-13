@@ -26,32 +26,32 @@ public class LoginScreen extends AppCompatActivity {
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    if (nameField.length() != 0 && descField.length() != 0 ) {
+                    //if (nameField.length() != 0 && descField.length() != 0 ) {
                         Intent intent = new Intent(LoginScreen.this, MainActivity.class);
                         startActivity(intent);
-                    }else{
-                        toastMessage("Please enter all the required information");
-                    }
+                    //}else{
+                       // toastMessage("Please enter all the required information");
+                   // }
                 }
             });
 
-            registerBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v){
-                    if (nameField.length() != 0 && descField.length() != 0 ){
-                        boolean isInserted = mDatabaseHelper.addData(nameField.getText().toString(),descField.getText().toString());
-                        if (isInserted){
-                            toastMessage("Registration Successful");
-                        }else{
-                            toastMessage("An error has occured");
-                        }
-                        nameField.setText("");
-                        descField.setText("");
-                    }else {
-                        toastMessage("Please enter all the required information");
-                    }
-                }
-            });
+        //registerBtn.setOnClickListener(new View.OnClickListener() {
+           // @Override
+            //public void onClick(View v){
+               // if (nameField.length() != 0 && descField.length() != 0 ){
+                   // boolean isInserted = mDatabaseHelper.addData(nameField.getText().toString(),descField.getText().toString());
+                   // if (isInserted){
+                     //   toastMessage("Registration Successful");
+                  //  }else{
+                    //    toastMessage("An error has occured");
+                  //  }
+                  //  nameField.setText("");
+                  //  descField.setText("");
+               // }else {
+                  //  toastMessage("Please enter all the required information");
+              //  }
+           // }
+       // });
         }
         private void toastMessage(String message){
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
