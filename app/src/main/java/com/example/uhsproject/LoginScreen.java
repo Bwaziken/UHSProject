@@ -29,6 +29,8 @@ public class LoginScreen extends AppCompatActivity {
                 if (nameField.length() != 0 && descField.length() != 0 ){
                     Intent intent = new Intent(LoginScreen.this, MainActivity.class);
                     startActivity(intent);
+                    nameField.setText("");
+                    descField.setText("");
                 }else {
                     toastMessage("Please enter all the required information");
                 }
