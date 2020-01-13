@@ -22,11 +22,10 @@
         app:menu="@menu/bottom_nav_menu" />
 
 
-
     <FrameLayout
-        android:layout_width="411dp"
-        android:layout_height="552dp"
         android:id="@+id/fragment_container"
+        android:layout_width="413dp"
+        android:layout_height="675dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
