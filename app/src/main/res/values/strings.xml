@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">UHSProject</string>
+    <string name="app_name">Peer Assistant</string>
     <string name="title_home">Listings</string>
     <string name="title_chats">Chats</string>
     <string name="title_info">Info</string>
