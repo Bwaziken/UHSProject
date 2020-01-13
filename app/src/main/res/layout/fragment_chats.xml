@@ -7,57 +7,42 @@ android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="398dp">
+        android:layout_height="478dp"
+        android:layout_below="@+id/scrollView2"
+        android:layout_marginTop="1dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="404dp"
-            android:layout_height="102dp"
+        <EditText
+            android:id="@+id/messageBox"
+            android:layout_width="309dp"
+            android:layout_height="49dp"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/message"
+            android:inputType="textLongMessage"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.428"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <Button
-                android:id="@+id/send"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginBottom="24dp"
-                android:text="@string/send"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/messageBox" />
-
-            <EditText
-                android:id="@+id/messageBox"
-                android:layout_width="309dp"
-                android:layout_height="49dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:layout_marginBottom="24dp"
-                android:ems="10"
-                android:hint="@string/message"
-                android:inputType="textLongMessage"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/send"
-                app:layout_constraintStart_toStartOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/barrier2"
+        <Button
+            android:id="@+id/send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:barrierDirection="left" />
+            android:layout_marginBottom="10dp"
+            android:text="@string/send"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/messageBox" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="410dp"
-        android:layout_height="289dp"
+        android:layout_height="272dp"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:layout_marginBottom="1dp">
@@ -71,39 +56,37 @@ android:layout_height="match_parent">
             <TextView
                 android:id="@+id/chatTop"
                 android:layout_width="match_parent"
-                android:layout_height="53dp"
+                android:layout_height="wrap_content"
                 android:background="#FFFFFF"
                 android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/chatpt"
                 android:layout_width="match_parent"
-                android:layout_height="54dp"
+                android:layout_height="wrap_content"
                 android:background="#FFFFFF"
                 android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/chatpt2"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:background="#FFFFFF"
                 android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/chatpt3"
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
+                android:layout_height="wrap_content"
                 android:background="#FFFFFF"
                 android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/chatpt4"
                 android:layout_width="match_parent"
-                android:layout_height="57dp"
+                android:layout_height="wrap_content"
                 android:background="#FFFFFF"
-                android:textSize="30sp"
-                tools:layout_editor_absoluteX="203dp"
-                tools:layout_editor_absoluteY="381dp" />
+                android:textSize="30sp" />
 
 
         </LinearLayout>
