@@ -42,6 +42,6 @@ public class TutorFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(getContext(),"Appointment Booked",Toast.LENGTH_LONG).show();
-    }
+    Toast.makeText(getContext(),"Appointment Booked",Toast.LENGTH_LONG).show();
+}
 }

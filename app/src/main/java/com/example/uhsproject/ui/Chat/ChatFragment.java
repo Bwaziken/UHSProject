@@ -18,6 +18,7 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.uhsproject.R;
 
 public class ChatFragment extends Fragment {
+    TextView name;
     String message,messageBefore,messageBeforeBefore,message3,message4;
     EditText messageBox;
     Button send;
@@ -27,6 +28,8 @@ public class ChatFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_chats, container, false);
+
+        name = (TextView) view.findViewById(R.id.tutorname);
 
         top = (TextView) view.findViewById(R.id.chatTop);//sent messages
         one = (TextView) view.findViewById(R.id.chatpt);//sent messages
@@ -58,6 +61,9 @@ public class ChatFragment extends Fragment {
         });
         return view;
 
+    }
+    public void changeName(String a){
+        name.setText(a);
     }
 }
 

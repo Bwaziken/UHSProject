@@ -5,11 +5,18 @@
     android:layout_width="match_parent"
 android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/tutorname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="113dp"
         android:layout_below="@+id/scrollView2"
-        android:layout_marginTop="3dp">
+        android:layout_marginTop="2dp">
 
         <EditText
             android:id="@+id/messageBox"
@@ -39,10 +46,11 @@ android:layout_height="match_parent">
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="410dp"
-        android:layout_height="272dp"
+        android:layout_height="217dp"
+        android:layout_below="@+id/tutorname"
         android:layout_marginStart="1dp"
         android:layout_marginLeft="1dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
         android:layout_marginBottom="1dp">
