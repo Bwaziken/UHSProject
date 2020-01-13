@@ -31,7 +31,7 @@
         android:layout_marginLeft="11dp"
         android:layout_marginTop="20dp"
         android:hint="Grade"
-        android:textSize="22sp"
+        android:textSize="15sp"
         android:background="@drawable/rectangle"
         />
 
@@ -43,7 +43,7 @@
         android:layout_marginTop="-43dp"
         android:background="@drawable/rectangle"
         android:hint="Subjects"
-        android:textSize="22sp" />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/infoDesc3"
@@ -53,7 +53,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/rectangle"
         android:hint="Description"
-        android:textSize="22sp" />
+        android:textSize="15sp" />
 
     <Button
         android:id="@+id/book"

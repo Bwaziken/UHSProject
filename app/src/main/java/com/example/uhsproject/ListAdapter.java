@@ -77,7 +77,7 @@ public class ListAdapter extends RecyclerView.Adapter {
 
 
         public void onClick(View view){
-            Toast.makeText(context,"The Item Clicked is: "+getPosition(),Toast.LENGTH_LONG).show();
+
             i=getPosition();
             AppCompatActivity activity = (AppCompatActivity) view.getContext();
             activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TutorFragment()).addToBackStack(null).commit();

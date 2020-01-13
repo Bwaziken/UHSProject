@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_info"
+
         android:textAlignment="center"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +37,8 @@
         android:layout_width="390dp"
         android:layout_height="39dp"
         android:layout_marginTop="12dp"
-        android:background="#00FFFFFF"
+
+        android:background="@drawable/rectangle"
         android:gravity="center"
         android:text="Felix Zheng"
         android:textSize="22sp"
@@ -52,9 +54,9 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="216dp"
         android:layout_marginRight="216dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/rectangle"
         android:text="Grade 12"
-        android:textAlignment="center"
+
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -66,10 +68,10 @@
         android:layout_width="192dp"
         android:layout_height="43dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorAccent"
+        android:background="@drawable/rectangle"
         android:text="Calculus"
         android:textSize="22sp"
-        android:textAlignment="center"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.949"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,15 +81,16 @@
         android:id="@+id/infoDesc3"
         android:layout_width="392dp"
         android:layout_height="104dp"
-        android:layout_marginBottom="80dp"
-        android:background="@color/colorAccent"
+        android:layout_marginTop="416dp"
+        android:background="@drawable/rectangle"
         android:text="Will help with any math up to gr 12 Calculus and Vectors"
+
+
         android:textSize="22sp"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.578"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_info" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
