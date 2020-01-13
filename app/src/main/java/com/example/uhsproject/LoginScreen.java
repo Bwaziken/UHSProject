@@ -38,14 +38,14 @@ public class LoginScreen extends AppCompatActivity {
                     if (nameField.length() != 0 && descField.length() != 0 ){
                         boolean isInserted = mDatabaseHelper.addData(nameField.getText().toString(),descField.getText().toString());
                         if (isInserted){
-                            toastMessage("You good my nigga");
+                            toastMessage("Registration Successful");
                         }else{
-                            toastMessage("Ay no good my man");
+                            toastMessage("An error has occured");
                         }
                         nameField.setText("");
                         descField.setText("");
                     }else {
-                        toastMessage("Yo enter something wasteyute");
+                        toastMessage("Please enter all the required information");
                     }
                 }
             });
