@@ -48,6 +48,7 @@ public class ListAdapter extends RecyclerView.Adapter {
     public int getItemCount() {
         return ListData.tutors.length;
     }
+    public static int i;
 
     private class ListViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private Context mContext;
@@ -73,8 +74,11 @@ public class ListAdapter extends RecyclerView.Adapter {
             mItemImage.setImageResource(ListData.profilePicture[position]);
         }
         @Override
+
+
         public void onClick(View view){
             Toast.makeText(context,"The Item Clicked is: "+getPosition(),Toast.LENGTH_LONG).show();
+            i=getPosition();
             AppCompatActivity activity = (AppCompatActivity) view.getContext();
             activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new TutorFragment()).addToBackStack(null).commit();
 

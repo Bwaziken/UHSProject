@@ -16,15 +16,26 @@ import androidx.fragment.app.Fragment;
 
 
 public class TutorFragment extends Fragment implements View.OnClickListener{
-Button book;
+
+
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
 
 
         View view = inflater.inflate(R.layout.fragment_tutorinfo, container, false);
 
-        book=(Button)view.findViewById(R.id.book);
+        Button book=(Button)view.findViewById(R.id.book);
         book.setOnClickListener(this);
+
+        TextView Name = (TextView)view.findViewById(R.id.tutorname);
+        TextView Grade = (TextView)view.findViewById(R.id.tutordescription1);
+        TextView Subjects = (TextView)view.findViewById(R.id.tutordescription2);
+        TextView Description = (TextView)view.findViewById(R.id.tutordescription3);
+
+        Name.setText(ListData.tutors[ListAdapter.i]);
+        Grade.setText(ListData.tutorsdescription[ListAdapter.i]);
+        Subjects.setText(ListData.tutorsdescription2[ListAdapter.i]);
+        Description.setText(ListData.tutorsdescription3[ListAdapter.i]);
         return view;
     }
 
