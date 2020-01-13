@@ -1,28 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/LinearLayout"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="100">
+    android:orientation="vertical">
 
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="40"
         android:id="@+id/tutorImage"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
 
-        android:src="@drawable/profilepic"/>
+
+        android:src="@drawable/profilepic" />
 
     <TextView
-        android:id="@+id/tutordescription"
+        android:id="@+id/tutorname"
         android:layout_width="390dp"
-        android:layout_height="136dp"
+        android:layout_height="39dp"
         android:layout_marginLeft="11dp"
-        android:layout_marginTop="40dp"
-        android:text="Info"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="Tutor Name"
         android:textSize="22sp"
+        android:background="@drawable/rectangle"/>
 
+    <TextView
+        android:id="@+id/tutordescription1"
+        android:layout_width="184dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="20dp"
+        android:hint="Grade"
+        android:textSize="22sp"
+        android:background="@drawable/rectangle"
         />
+
+    <TextView
+        android:id="@+id/tutordescription2"
+        android:layout_width="192dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="-43dp"
+        android:background="@drawable/rectangle"
+        android:hint="Subjects"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tutordescription3"
+        android:layout_width="391dp"
+        android:layout_height="89dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle"
+        android:hint="Description"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/book"
+        android:layout_width="391dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="25dp"
+        android:layout_height="wrap_content"
+        android:text="Book Tutor"
+        android:background="@drawable/rectangle"/>
+
 
 </LinearLayout>
