@@ -46,6 +46,7 @@ public class TutorFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+
         AppCompatActivity activity = (AppCompatActivity) v.getContext();
         switch (v.getId()) {
             case R.id.book:
@@ -60,4 +61,8 @@ public class TutorFragment extends Fragment implements View.OnClickListener{
 
     }
 
+
+
 }
+
+
