@@ -29,25 +29,33 @@ public class ListData {
         }
         return AccountDesc;
     }
-
-    public static String[] tutors = new String[] {"tutor", "tutor", "tutor"};
-    public static String[] tutorsdescription = new String[] {"tutor", "tutor", "tutor"};
-    public static int[] profilePicture = new int[]{R.drawable.profilepic,R.drawable.profilepic,R.drawable.profilepic};
-   // public static String[] tutors = new String[AccountName.size()];
+// public static String[] tutors = new String[AccountName.size()];
 
     //public static String[] tutorsdescription = new String[AccountName.size()];
 
-   // public static int[] profilePicture = new int[AccountName.size()];
+    // public static int[] profilePicture = new int[AccountName.size()];
 
     //public static void passes(){
 
-        //for (int i=0;i<AccountName.size();i++){
-            //tutors[i]=AccountName.get(i);
-            //tutorsdescription[i]=AccountDesc.get(i);
-            //profilePicture[i]=R.drawable.profilepic;
+    //for (int i=0;i<AccountName.size();i++){
+    //tutors[i]=AccountName.get(i);
+    //tutorsdescription[i]=AccountDesc.get(i);
+    //profilePicture[i]=R.drawable.profilepic;
 
-       // }
+    // }
 
     //}
+    public static String[] tutors = new String[] {"Jason Chen",
+            "Derrick Yang", "Alexander Woo", "Michael Qian", "Sarah Smith", "Emily Cooke", "Tommy Hamilton", "Laura Ing", "Karen Cox", "Juan Lopez"};
+    public static String[] tutorsdescription = new String[] {"Advanced Functions",
+            "Chemistry", "Computer Science", "Physics", "English", "French", "Calculus", "Biology", "Accounting", "Data Management (Math)"};
+    public static String[] tutorsdescription2 = new String[] {"Grade 12",
+            "Grade 12", "Grade 12", "Grade 12", "Grade 11", "Grade 11", "Grade 11", "Grade 12", "Grade 11", "Grade 12"};
+    public static String[] tutorsdescription3 = new String[] {"Available Mondays at 6:00-7:00PM",
+            "Offering help in grade 12 chemistry anytime on weekends", "Available on Fridays after 4:00pm ", "Free for 1 hour on friday", "Available anytime on the weekends", "Can help for 1 hour any day", "Available Wednesdays at 4:00pm", "Offering help on Thursdays anytime", "Available mondays at 4:00PM", "Free to help every tuesday"};
+    public static int[] profilePicture = new int[]{R.drawable.profilepic,R.drawable.profilepic,R.drawable.profilepic, R.drawable.profilepic,R.drawable.profilepic,
+            R.drawable.profilepic,R.drawable.profilepic,R.drawable.profilepic,R.drawable.profilepic,R.drawable.profilepic};
+
+
 
 }

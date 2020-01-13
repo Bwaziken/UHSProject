@@ -18,65 +18,76 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/tutorImage"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+
+
+        android:background="#FFFFFF"
+        android:src="@drawable/profilepic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_info"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.174" />
 
-    <EditText
-        android:id="@+id/nameField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="101dp"
-        android:layout_marginLeft="101dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="96dp"
-        android:layout_marginRight="96dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <Button
-        android:id="@+id/registerBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.306"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descField" />
-
-    <EditText
-        android:id="@+id/descField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/infoName"
+        android:layout_width="390dp"
+        android:layout_height="39dp"
         android:layout_marginTop="12dp"
-        android:ems="10"
-        android:hint="Subject"
-        android:inputType="textPersonName"
+        android:background="#00FFFFFF"
+        android:gravity="center"
+        android:text="Felix Zheng"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameField" />
+        app:layout_constraintTop_toBottomOf="@+id/tutorImage" />
 
-    <Button
-        android:id="@+id/LogIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Login"
+    <TextView
+        android:id="@+id/infoDesc1"
+        android:layout_width="184dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="216dp"
+        android:layout_marginRight="216dp"
+        android:background="@color/colorAccent"
+        android:text="Grade 12"
+        android:textAlignment="center"
+        android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.286"
-        app:layout_constraintStart_toEndOf="@+id/registerBtn"
-        app:layout_constraintTop_toBottomOf="@+id/descField" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoName" />
+
+    <TextView
+        android:id="@+id/infoDesc2"
+        android:layout_width="192dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:text="Calculus"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoName" />
+
+    <TextView
+        android:id="@+id/infoDesc3"
+        android:layout_width="392dp"
+        android:layout_height="104dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/colorAccent"
+        android:text="Will help with any math up to gr 12 Calculus and Vectors"
+        android:textSize="22sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

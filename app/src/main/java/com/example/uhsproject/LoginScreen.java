@@ -16,21 +16,24 @@ public class LoginScreen extends AppCompatActivity {
     EditText nameField, descField;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        mDatabaseHelper = new DatabaseHelper(this);
+        registerBtn = findViewById(R.id.registerBtn);
+        nameField = findViewById(R.id.nameField);
+        descField = findViewById(R.id.descField);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
         signin=(Button) findViewById(R.id.signin);
         signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginScreen.this,MainActivity.class);
-                startActivity(intent);
-            }
-        });
-
-            mDatabaseHelper = new DatabaseHelper(this);
-            registerBtn = findViewById(R.id.registerBtn);
-            nameField = findViewById(R.id.nameField);
-            descField = findViewById(R.id.descField);
+                    if (nameField.length() != 0 && descField.length() != 0 ) {
+                        Intent intent = new Intent(LoginScreen.this, MainActivity.class);
+                        startActivity(intent);
+                    }else{
+                        toastMessage("Please enter all the required information");
+                    }
+                }
+            });
 
             registerBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
