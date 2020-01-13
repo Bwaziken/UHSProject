@@ -48,7 +48,7 @@
     <TextView
         android:id="@+id/infoDesc3"
         android:layout_width="391dp"
-        android:layout_height="89dp"
+        android:layout_height="72dp"
         android:layout_marginLeft="11dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/rectangle"
@@ -58,11 +58,20 @@
     <Button
         android:id="@+id/book"
         android:layout_width="391dp"
+        android:layout_height="44dp"
         android:layout_marginLeft="11dp"
         android:layout_marginTop="25dp"
-        android:layout_height="wrap_content"
-        android:text="Book Tutor"
-        android:background="@drawable/rectangle"/>
+        android:background="@drawable/rectangle"
+        android:text="Book Tutor" />
+
+    <Button
+        android:id="@+id/chat"
+        android:layout_width="391dp"
+        android:layout_height="44dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rectangle"
+        android:text="Chat " />
 
 
 </LinearLayout>

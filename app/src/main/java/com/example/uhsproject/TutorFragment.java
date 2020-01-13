@@ -11,8 +11,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import com.example.uhsproject.ui.Chat.ChatFragment;
 
 
 public class TutorFragment extends Fragment implements View.OnClickListener{
@@ -26,6 +28,8 @@ public class TutorFragment extends Fragment implements View.OnClickListener{
 
         Button book=(Button)view.findViewById(R.id.book);
         book.setOnClickListener(this);
+        Button chat=(Button)view.findViewById(R.id.chat);
+        chat.setOnClickListener(this);
 
         TextView Name = (TextView)view.findViewById(R.id.infoName);
         TextView Grade = (TextView)view.findViewById(R.id.infoDesc1);
@@ -42,6 +46,18 @@ public class TutorFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(getContext(),"Appointment Booked",Toast.LENGTH_LONG).show();
+        AppCompatActivity activity = (AppCompatActivity) v.getContext();
+        switch (v.getId()) {
+            case R.id.book:
+                Toast.makeText(getContext(),"Appointment Booked",Toast.LENGTH_LONG).show();
+                break;
+
+            case R.id.chat:
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ChatFragment()).addToBackStack(null).commit();
+                break;
+        }
+
+
     }
+
 }
